@@ -10,7 +10,7 @@ def traverse(start: int, dest: int, path: list):
     if start == dest:
         return path
 
-    for node in nodes[start].connections:
+    for node in nodes[start].connections.keys():
         if node not in path:
             return traverse(node, dest, path)
 

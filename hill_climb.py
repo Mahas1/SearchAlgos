@@ -6,18 +6,13 @@ dest = 3
 make_heuristic(dest)
 
 
-def sort_by_heuristic(given_nodes: list[int]):
-    given_nodes.sort(key=lambda x: nodes[x].heuristic)
-    return given_nodes
-
-
 def traverse(start: int, dest: int, path: list):
     path = path + [start]
 
     if start == dest:
         return path
 
-    next_nodes = sort_by_heuristic(nodes[start].connections)
+    next_nodes = sort_by_heuristic(nodes[start].connections.keys())
 
     for node in next_nodes:
         if node not in path:

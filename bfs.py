@@ -13,7 +13,7 @@ def traverse(start: int, dest: int, path: list, solutions: list):
         # preemptive exit
         return solutions
 
-    for node in nodes[start].connections:
+    for node in nodes[start].connections.keys():
         # same level nodes
         if node not in path:
             if check_solution(path + [node], dest):

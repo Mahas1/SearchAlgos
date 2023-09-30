@@ -1,15 +1,13 @@
 from nodes_universal import *
 
-from hill_climb import sort_by_heuristic
-
 
 def traverse(start: int, dest: int, width: int, path: list):
     path = path + [start]
-    found = 0
+
     if start == dest:
         return path
 
-    next_nodes = sort_by_heuristic(nodes[start].connections)
+    next_nodes = sort_by_heuristic(list(nodes[start].connections.keys()))
 
     count = 0
     for node in next_nodes:
