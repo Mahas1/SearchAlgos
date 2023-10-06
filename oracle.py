@@ -13,7 +13,7 @@ def traverse(start: int, dest: int, oracle: tuple, oracle_cost: int, path: tuple
                 oracle = path
                 oracle_cost = current_cost
 
-    for node, cost in sort_by_cost(nodes[start].connections).items():
+    for node, cost in sort_by_cost(nodes[start].connections):
 
         if node not in path:
             oracle, oracle_cost, solutions = traverse(node, dest, oracle, oracle_cost, path,
