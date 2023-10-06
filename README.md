@@ -8,3 +8,5 @@
 - Hill Climbing
 - Beam Search
 - Oracle
+- Branched and Bound
+- Branched and Bound + Extended List
