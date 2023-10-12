@@ -29,6 +29,11 @@ def sort_by_heuristic(given_nodes: list[int]) -> list[int]:
     return given_nodes
 
 
+def sort_by_cost_heuristic(given_nodes: list[int]) -> list[int]:
+    given_nodes.sort(key=lambda x: nodes[x].heuristic + nodes[x].cost)
+    return given_nodes
+
+
 def sort_by_cost(connections: dict) -> list[tuple[int, int]]:
     return sorted(connections.items(), key=lambda x: x[1])
 
